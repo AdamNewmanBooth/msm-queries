@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   def index
-      render({ :template => "actor_templates/list" })
+      render({ :template => "actors_templates/list" })
   end
 
   def show 
@@ -8,6 +8,6 @@ class ActorsController < ApplicationController
      matching_records = Actor.where({ :id => the_id })
     @the_actor= matching_records.at(0)
 
-      render({ :template => "actor_templates/details" })
+      render({ :template => "actors_templates/details" })
   end
 end

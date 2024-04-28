@@ -11,4 +11,10 @@
 #  updated_at :datetime         not null
 #
 class Director < ApplicationRecord
+  def self.youngest
+      order(dob: :desc).first
+  end
+  def self.eldest
+    order(:dob).first
+  end
 end
